@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "2c40a5ee-7deb-47f4-8829-be5b1a5be162",
+		"name": "Cats API Likes (Chistyakov Max)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Поставить/убрать лайк/дизлайк коту по ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"like\": true,\r\n  \"dislike\": false\r\n}"
+				},
+				"url": {
+					"raw": "https://meowle.qa-fintech.ru/api/likes/cats/{{catid}}/likes",
+					"protocol": "https",
+					"host": [
+						"meowle",
+						"qa-fintech",
+						"ru"
+					],
+					"path": [
+						"api",
+						"likes",
+						"cats",
+						"{{catid}}",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка \"ТОП-10 лайков\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://meowle.qa-fintech.ru/api/likes/cats/likes-rating",
+					"protocol": "https",
+					"host": [
+						"meowle",
+						"qa-fintech",
+						"ru"
+					],
+					"path": [
+						"api",
+						"likes",
+						"cats",
+						"likes-rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить список \"ТОП-10 дизлайков\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://meowle.qa-fintech.ru/api/likes/cats/dislikes-rating",
+					"protocol": "https",
+					"host": [
+						"meowle",
+						"qa-fintech",
+						"ru"
+					],
+					"path": [
+						"api",
+						"likes",
+						"cats",
+						"dislikes-rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка \"ТОП-10 лайков и дизлайков\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://meowle.qa-fintech.ru/api/likes/cats/rating",
+					"protocol": "https",
+					"host": [
+						"meowle",
+						"qa-fintech",
+						"ru"
+					],
+					"path": [
+						"api",
+						"likes",
+						"cats",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "catid",
+			"value": "1129"
+		}
+	]
+}
